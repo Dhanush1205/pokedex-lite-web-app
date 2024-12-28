@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokedex</h1>
+        <div class="search-section">
+            <input type="text" id="search" placeholder="Search Pokémon" oninput="searchPokemon()">
+            <select id="type-filter" onchange="filterByType()">
+                <option value="">Filter by Type</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+            </select>
+        </div>
+        <div id="pokemon-list" class="pokemon-list"></div>
+        <div id="pagination">
+            <button id="prev-page" onclick="goToPreviousPage()">Previous</button>
+            <button id="next-page" onclick="goToNextPage()">Next</button>
+        </div>
+        <div id="pokemon-detail" class="pokemon-detail">
+            <button onclick="closeDetail()">Close</button>
+            <img id="detail-img" src="" alt="Pokémon Image">
+            <h2 id="detail-name"></h2>
+            <p id="detail-types"></p>
+            <p id="detail-desc"></p>
+            <button id="fav-btn" onclick="toggleFavorite()">Add to Favorites</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
